@@ -1,0 +1,17 @@
+# TO DO
+version: '3'
+
+services:
+  nextjs:
+    build: .
+    image: nextjs-docker:latest
+    container_name: nextjs-docker
+    # volumes:
+      # - .:/app
+      # - /app/node_modules
+    ports:
+      - "3000:3000"
+    network_mode: bridge
+    restart: always
+    command: node server.js
+    
